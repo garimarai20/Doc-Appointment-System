@@ -30,7 +30,7 @@ const loginController = async(req,res) => {
     try {
         const user = await userModel.findOne({email: req.body.email});
         if(!user){
-            return res.status(200).send({message : `user not found`,success : false});
+            return res.status(200).send({message : `User Not Found`,success : false});
         }
         const isMatch = await bcrypt.compare(req.body.password, user.password);
         if(!isMatch){
