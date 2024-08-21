@@ -8,7 +8,7 @@ const HomePage = () => {
       const res = await axios.post('api/v1/user/getUserData',{
         Headers : {
           Authorization : "Bearer " + localStorage.getItem("token"),
-        }
+        },
       })
       
     } catch (error) {

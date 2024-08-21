@@ -45,5 +45,13 @@ const loginController = async(req,res) => {
      }
 };
 
+const authController = async (req, res) => {
+    try {
+        
+    } catch (error) {
+        console.log(error);
+        res.status(500).send
+    }
+};
 
-module.exports = {loginController, registerController};
+module.exports = {loginController, registerController , authController};
