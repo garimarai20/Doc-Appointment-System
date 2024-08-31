@@ -8,11 +8,14 @@ import { Link , useNavigate} from 'react-router-dom';
 
 const Register = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     
     //formhandler
     const onFinishHandler= async(values) =>{
         try {
+            dispatch(showLoading());
             const res = await axios.post('/api/v1/user/register', values);
+            dispatch(hideLoading());
             if(res.data.success){
                 message.success('Registered Successfully !');
                 navigate('/login');
@@ -20,6 +23,7 @@ const Register = () => {
                 message.error(res.data.message);
             }
         } catch (error) {
+            dispatch(hideLoading());
             console.log(error);
             message.error('Something went Wrong');
             
