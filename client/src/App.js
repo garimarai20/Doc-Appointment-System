@@ -4,17 +4,21 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import {useSelector} from 'react-redux'
 import { showLoading } from './redux/features/alertSlice';
+import Spinner from './components/Spinner';
 function App() {
 
   const {loading} = useSelector(state => state.alerts);
   return (
   <>
   <BrowserRouter>
-  <Routes>
+    {loading ? (<Spinner />):(
+    <Routes>
     <Route path='/' element={<HomePage />} />
     <Route path='/login' element={<Login />}/>
     <Route path='/register' element={<Register />}/>
   </Routes>
+    )}
+  
   </BrowserRouter>
   </>
   );
