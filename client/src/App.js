@@ -16,10 +16,14 @@ function App() {
     {loading ? (<Spinner />):(
     <Routes>
     <Route path='/' element={
-      <ProtectedRoute><HomePage /></ProtectedRoute>
+     <ProtectedRoute> 
+        <HomePage />
+     </ProtectedRoute> 
       } />
     <Route path='/login' element={
-      <PublicRoute><Login /></PublicRoute>
+     <PublicRoute>
+        <Login />
+     </PublicRoute> 
       }/>
     <Route path='/register' element={
       <PublicRoute><Register /></PublicRoute>}/>

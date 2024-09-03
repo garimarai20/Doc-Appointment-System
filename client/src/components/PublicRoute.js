@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom'
 export default function PublicRoute({children}) {
     if (localStorage.getItem('token')){
         return <Navigate to= '/' />;
+        localStorage.removeItem('token');
       }else{
         return children;
 }
