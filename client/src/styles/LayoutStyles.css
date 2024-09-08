@@ -1,10 +1,12 @@
 .main{
     padding: 20px ;
     height: 100vh;
+    width: 80%;
     
 }
 .layout {
     display: flex;
+    
 }
 
 .sidebar{
@@ -24,6 +26,7 @@
 
 .header{
     height: 10vh;
+    padding:20px;
     margin-bottom: 20px;
     box-shadow: 0 0 2px gray;
     background-color: white;
@@ -35,3 +38,4 @@
     box-shadow: 0 0 2px gray;
     background-color: white;
 }
+
