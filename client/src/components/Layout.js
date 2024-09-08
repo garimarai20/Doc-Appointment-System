@@ -8,6 +8,7 @@ const Layout = () => {
      <div className='layout'>
 
         <div className='sidebar'>
+            <div className='logo'>Logo</div>
 
         </div>
 
