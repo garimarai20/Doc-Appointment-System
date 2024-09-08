@@ -1,18 +1,15 @@
-import React from 'react'
-import Layout from './Layout';
-import "../styles/LayoutStyles.css"
+import React from 'react';
+import "../styles/LayoutStyles.css";
 
 const Layout = ({children}) => {
   return (
   <>
   <div className='main'>
      <div className='layout'>
-
         <div className='sidebar'>
             <div className='logo'>Logo</div>
             <div className='menu'>Menu</div>
         </div>
-
         <div className='content'></div>
             <div className='header'>Header</div>
             <div className='body'>{children}</div>
