@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from './Layout';
+import "../styles/LayoutStyles.css"
 
-const Layout = () => {
+const Layout = ({children}) => {
   return (
   <>
   <div className='main'>
@@ -9,10 +10,12 @@ const Layout = () => {
 
         <div className='sidebar'>
             <div className='logo'>Logo</div>
-
+            <div className='menu'>Menu</div>
         </div>
 
         <div className='content'></div>
+            <div className='header'>Header</div>
+            <div className='body'>{children}</div>
 
      </div>
   </div>
