@@ -63,9 +63,21 @@
 
 }
 .active{
-    background-color:white ;
-    padding:10px
+    background-color:rgb(255, 255, 255) ;
+    padding:20px;
+    
 }
-.active a{
+.active a, .active i{
     color:  rgb(13, 133, 93);
+    font-size: x-large;
 }
+
+.header-content{
+margin:0 15px;
+display: flex;
+align-items: center;
+height: 30px;
+justify-content: flex-end;
+}
+
+.header
