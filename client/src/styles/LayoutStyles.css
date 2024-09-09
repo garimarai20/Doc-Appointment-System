@@ -64,5 +64,8 @@
 }
 .active{
     background-color:white ;
-    color:  rgb(0, 110, 73);
+    padding:10px
+}
+.active a{
+    color:  rgb(13, 133, 93);
 }
