@@ -17,7 +17,8 @@ const Layout = ({children}) => {
                     return(
                         <>
                             <div className='menu-item'>
-
+                                <i className={menu.icon}></i>
+                                <Link to={menu.path}>{menu.name}</Link>
                             </div>
                         </>
                     )
