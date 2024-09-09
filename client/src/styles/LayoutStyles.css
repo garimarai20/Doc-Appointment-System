@@ -80,4 +80,14 @@ height: 30px;
 justify-content: flex-end;
 }
 
-.header
+.header-content a{
+    text-decoration: none;
+    color: rgb(42, 42, 253);
+    margin:0 10px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.header-content i{
+    color: rgb(13, 133, 93);
+    font-size: 1.2rem;
+}
