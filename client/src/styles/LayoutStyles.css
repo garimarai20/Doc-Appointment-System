@@ -46,7 +46,9 @@
 .logo hr{
     background-color: aquamarine;
 }
-
+.menu{
+    margin-top:50px;
+}
 .menu-item{
     margin-top:30px ;
 }
@@ -54,4 +56,13 @@
     color:white ;
     text-decoration: none;
     font-size: 1.2rem;
+}
+.menu-item i{
+    font-size: 1.2rem;
+    margin:0 15px;
+
+}
+.active{
+    background-color:white ;
+    color:  rgb(0, 110, 73);
 }
