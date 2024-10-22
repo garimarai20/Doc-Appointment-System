@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import{ Col, Form,Input, Row } from 'antd'
+import{ Col, Form,Input, Row, TimePicker } from 'antd'
 
 
 export const ApplyDoctor = () => {
@@ -42,6 +42,34 @@ export const ApplyDoctor = () => {
                     
                 </Col>
                 
+            </Row>
+            <h4 className="" >Professional Details</h4>
+            <Row gutter={20} >
+                <Col xs={24} md={24} lg={8}>
+                    <Form.Item label='Specialization' name="specialization" required rules= {[{required:true}]}>
+                        <Input type= "text" placeholder='Enter Specialization'/>
+                    </Form.Item>
+                    <Form.Item label='Experience' name="experience" required rules= {[{required:true}]}>
+                        <Input type= "text" placeholder='Enter Experience'/>
+                    </Form.Item>
+                   
+                </Col>
+                <Col xs={24} md={24} lg={8}>
+                    <Form.Item label='Fees Per consultation' name="consultationFees" required rules= {[{required:true}]}>
+                        <Input type= "text" placeholder='Enter Consultation Fees'/>
+                    </Form.Item>
+                   
+                </Col>
+                <Col xs={24} md={24} lg={8}>
+                    <Form.Item label='Timings' name="timings" required rules= {[{required:true}]}>
+                        <TimePicker.RangePicker format ="HH:mm"/>
+                    </Form.Item>
+                    <Col xs={24} md={24} lg={8}>
+                    <button className='btn btn-primary form-btn'type='submit'>Submit</button> </Col>
+                </Col>
+                <Col xs={24} md={24} lg={8}></Col>
+                
+               
             </Row>
         </Form>
     </Layout>

@@ -1,6 +1,7 @@
 const userModel = require('../models/userModels');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const doctorModel = require('../models/doctorModel')
 
 // register callback
 const registerController = async(req,res) =>{
@@ -72,4 +73,19 @@ const authController = async (req, res) => {
     }
 };
 
-module.exports = {loginController, registerController , authController};
+//Apply Doctor CTRL
+const applyDoctorController=async(req, res) =>{
+    try {
+        const newDoctor = await doctorModel.findById
+        
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            message:'Error while Applying for Doctor',
+            success: false,
+            error,
+        })
+    }
+}
+
+module.exports = {loginController, registerController , authController, applyDoctorController};
